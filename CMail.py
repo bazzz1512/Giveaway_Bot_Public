@@ -6,11 +6,6 @@ import time
 
 class CMailResponseBot:
     SMTP_PORT = 993
-    API_KEY = "" # Don't steal my API key
-    proxies = {
-        "http": f'http://scraperapi:{API_KEY}@proxy-server.scraperapi.com:8001',
-        "https": f'http://scraperapi:{API_KEY}@proxy-server.scraperapi.com:8001'
-    }
 
     def __init__(self, username, password):
         self.mail = imaplib.IMAP4_SSL("imap.gmail.com")
